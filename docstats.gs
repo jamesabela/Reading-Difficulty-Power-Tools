@@ -77,7 +77,7 @@ wordAnalysis()
   else if (dalechall<=6.9){dguide="Unaided reading age 12-14"}
   else if (dalechall<=7.9){dguide="Unaided reading age 14-16"}
   else if (dalechall<=8.9){dguide="Unaided reading age 16-18"}
-  else {dguide="Reading age 18+"}
+  else {dguide="Unaided reading age 18+"}
   
   flesch = 206.835 - (1.015*(word_count/fullstops.length)) - (84.6 * word_count/syllable_total)
   flesch = Math.round(flesch)
