@@ -92,10 +92,11 @@ function lowFreqWords() {
   generateList()
   for (var alphabetical of wordlist) {
     if (!beginner.includes(alphabetical)&&!withquotation.includes(alphabetical)&&!elementary.includes(alphabetical)&&!intermediate.includes(alphabetical)&&!upper.includes(alphabetical)&&alphabetical.length>3) {
-        var definition =' - <a href="https://www.dictionary.com/browse/'+alphabetical+'"target="_blank">def</a>'
+        var definition ='<br><a href="https://www.dictionary.com/browse/'+alphabetical+'"target="_blank">def</a>'
         var thesaurus =' <a href="https://www.thesaurus.com/browse/'+alphabetical+'"target="_blank">syn</a>'
         var nounproject =' <a href="https://thenounproject.com/search/?q='+alphabetical+'"target="_blank">img</a>'
-        output.append('<tr><td>'+alphabetical+definition+thesaurus+nounproject+'</td> <td>') 
+        var ngram =' <a href="https://books.google.com/ngrams/graph?content='+alphabetical+'"target="_blank">ngram</a>'
+        output.append('<tr><td>'+alphabetical+definition+thesaurus+nounproject+ngram+'</td> <td>') 
         output.append(' L')
         output.append('</td></tr>')
     }
