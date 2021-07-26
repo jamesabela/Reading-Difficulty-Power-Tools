@@ -20,11 +20,11 @@
       type: 'wordcloud',
       options: {
         text: '<?for (var i=0; i<paragraphs.length;i++){?>
-<?= paragraphs[1].getText() ?>
+<?= paragraphs[i].getText() ?>
     <? } ?>',
         rotate: true,
         aspect: 'spiral',
-        minLength: '4px',
+        minLength: 4,
         ignore: ['this','she','them','the','its','for'],
         colorType: 'palette',
         palette: ['#D32F2F', '#5D4037', '#1976D2', '#E53935', '#6D4C41', '#1E88E5', '#F44336', '#795548', '#2196F3', '#EF5350', '#8D6E63', '#42A5F5'],
