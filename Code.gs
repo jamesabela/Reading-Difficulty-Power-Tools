@@ -17,6 +17,7 @@ function onOpen() {
         .addSeparator()
         .addItem('🔍Difficulty Guide', 'gen_summary')
         .addItem('High Frequency Word List','allHighFreq')
+        .addItem('Word Cloud', 'wordcloud')
         .addSeparator()
         .addItem('▦Create Sheet (low freq)', 'genLowFreqSheet')
         .addItem('▦Create Sheet (full)', 'generateSheet')
