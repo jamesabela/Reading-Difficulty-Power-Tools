@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <meta charset="utf-8">
+  <title>ZingSoft Demo</title>
+  <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
+ 
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <style></style>
+</head>
+ 
+<body>
+  <div id="myChart"></div>
+  <script>
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+    zingchart.MODULESDIR = 'https://cdn.zingchart.com/modules/';
+ 
+    var myConfig = {
+      type: 'wordcloud',
+      options: {
+        text: '<?for (var i=0; i<paragraphs.length;i++){?>
+<?= paragraphs[1].getText() ?>
+    <? } ?>',
+        rotate: true,
+        aspect: 'spiral',
+        minLength: '4px',
+        ignore: ['this','she','them','the','its','for'],
+        colorType: 'palette',
+        palette: ['#D32F2F', '#5D4037', '#1976D2', '#E53935', '#6D4C41', '#1E88E5', '#F44336', '#795548', '#2196F3', '#EF5350', '#8D6E63', '#42A5F5'],
+ 
+        style: {
+          fontFamily: 'Crete Round',
+ 
+          hoverState: {
+            backgroundColor: '#D32F2F',
+            borderRadius: 2,
+            fontColor: 'white'
+          },
+          tooltip: {
+            text: '%text: %hits',
+            visible: true,
+            alpha: 0.9,
+            backgroundColor: '#1976D2',
+            borderRadius: 2,
+            borderColor: 'none',
+            fontColor: 'white',
+            fontFamily: 'Georgia',
+            textAlpha: 1
+          }
+        }
+      },
+    };
+ 
+    zingchart.render({
+      id: 'myChart',
+      data: myConfig,
+      height: '450',
+      width: '640'
+    });
+  </script>
+</body>
+ 
+</html>
