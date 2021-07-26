@@ -21,5 +21,16 @@ var htmlOutput = HtmlService
     .setWidth(650)
     .setHeight(500);
 DocumentApp.getUi().showModalDialog(htmlOutput, 'Feedback');
-   
-}    
+}
+
+function wordcloud() {
+    var wordy = HtmlService
+      .createTemplateFromFile('wc')
+      .evaluate();
+  
+  wordy.setWidth(650)
+  wordy.setHeight(500)
+
+  //DocumentApp.getUi().showSidebar(wordy);
+  DocumentApp.getUi().showModalDialog(wordy, 'Word Cloud');
+  }    
