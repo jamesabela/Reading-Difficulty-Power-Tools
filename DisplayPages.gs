@@ -28,8 +28,8 @@ function wordcloud() {
       .createTemplateFromFile('wc')
       .evaluate();
   
-  wordy.setWidth(650)
-  wordy.setHeight(500)
+  wordy.setWidth(800)
+  wordy.setHeight(640)
 
   //DocumentApp.getUi().showSidebar(wordy);
   DocumentApp.getUi().showModalDialog(wordy, 'Word Cloud');
