@@ -21,16 +21,16 @@ function onOpen() {
         .addSeparator()
         .addItem('▦Create Sheet (low freq)', 'genLowFreqSheet')
         .addItem('▦Create Sheet (full)', 'generateSheet')
-        .addSeparator()        
-        .addSubMenu(ui.createMenu('Highlighting')
-          .addItem('low frequency words', 'hlLowFreqWords')
-          .addItem('unhighlight low freq', 'unLowFreqWords')
-          )
+        .addSeparator()
+        .addItem('Highlight low freq words', 'hlLowFreqWords')
+        .addSubMenu(ui.createMenu('parts of speech')
+          .addItem('🟩 highlight nouns','hlnouns')
+          .addItem('🟥 highlight verbs','hlverbs')
+          .addItem('🟦 highlight adjectives','hladj')
+          .addItem('🟨 highlight adverbs','hladv')
           .addSeparator() 
           .addItem('Give Feedback', 'FeedbackUrl')
           
-      
-//      .addSubMenu(('Highlighting').addItem('Highlight low frequency words','hlLowFreqWords'))
       .addToUi();
 }
 
