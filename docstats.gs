@@ -86,8 +86,6 @@ wordAnalysis()
   else if (flesch>75){stats.append('Flesch score:<span style="color:orange"> Challenging</span></p>')}
   else {stats.append('Flesch score:<span style="color:red"> Difficult</span></p>')}
   
-
-  //stats.append("<details><summary>More Details</summary>")
   stats.append("</summary>")
   stats.append("<p><strong>Length difficulty</strong>")
   stats.append("<br>words: "+word_count)
@@ -111,7 +109,7 @@ wordAnalysis()
   stats.append('<svg width="100" height="17"><rect width="'+percentUpp+'" height="15" style="fill:rgb(247, 244, 52);stroke-width:1;stroke:rgb(0,0,0)" /></svg></tr>')
   stats.append("<tr><td>Difficult words: </td><td>")
   stats.append('<svg width="100" height="17"><rect width="'+percentDif+'" height="15" style="fill:rgb(255, 0, 0);stroke-width:1;stroke:rgb(0,0,0)" /></svg></tr></table>')
-  stats.append("<p>"+dguide)
+  stats.append("<p>"+dguide+" (<a href='https://sites.google.com/view/rdpt/learn/age-guide' target='_blank'>Guide</a>)")
   stats.append('<p style="font-family:verdana;"><strong>Reading Time</strong></p>')  
   // 150*60*5 means you can ready 45,000 characters per hour. The full circle is 31.4 so 0.00069777777
   stats.append('<svg height="100" width="100" viewBox="0 0 20 20"><circle r="10" cx="10" cy="10" fill="gray" /><circle r="5" cx="10" cy="10" fill="transparent" stroke="tomato" stroke-width="10" stroke-dasharray="calc('+cchar*0.00069777777+') 31.4" transform="rotate(-90) translate(-20)" /></svg>')
