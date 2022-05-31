@@ -99,7 +99,12 @@ function hlLowFreqWords() {
         else if (alphabetical.substring(alphabetical.length - 1, alphabetical.length)=="s"){ //handle noun regular plurals
           const result = mydict.find(word => word.word == alphabetical.substring(0, alphabetical.length - 1))
           if (typeof result !== 'undefined'&& alphabetical.length>3){ // Must check undefined first otherwise       object error
-            if (result.speech_part=='noun'){background ='#a6d871'}}}
+            if (result.speech_part=='noun'){background ='#a6d871'}
+            else if (result.speech_part=='adjective'){background ='#2584ff'} // couuld be an adjective
+            else{background ='#BEBEBE'} 
+            }
+            else{background ='#BEBEBE'} // Must highlight anything else grey otherwise background error.
+            }
 
         else{background ='#BEBEBE'}
         highlightText(alphabetical,background)
