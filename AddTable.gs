@@ -13,7 +13,6 @@ var rowsData = [['Word', 'Notes']];
                   const result = mydict.find(word => word.word == verblist[select_pos])
                   if (typeof result !== 'undefined'){definition = '['+(result.speech_part)+'] '+(result.definition)}
                     else{definition = '['+(result.speech_part)+'] '}}
-        
         else if(alphabetical.substring(alphabetical.length - 1, alphabetical.length)=="s"){ //handle regular plurals or third person
           const result = mydict.find(word => word.word == alphabetical.substring(0, alphabetical.length - 1))
           if (typeof result !== 'undefined'){definition = '['+(result.speech_part)+'] '+(result.definition)}
@@ -29,7 +28,13 @@ var rowsData = [['Word', 'Notes']];
           if (typeof result !== 'undefined'){definition = '['+(result.speech_part)+'] '+(result.definition)}
           else{definition =''}}
 
-        else{definition =''}
+        else{
+        alphabetical = alphabetical[0].toUpperCase() + alphabetical.substring(1) // Handling common proper nouns
+        const result = propernouns.find(word => word.word == alphabetical)
+        if (typeof result !== 'undefined'){definition = '[Proper Noun] '+(result.definition)
+        }
+          else {definition =''}
+          }
         rowsData.push([alphabetical,definition])        
         }
   }
